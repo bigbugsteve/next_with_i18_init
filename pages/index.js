@@ -2,12 +2,15 @@ import Head from "next/head";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import styles from "../styles/Home.module.css";
-
+import { useContext } from 'react'
+import { AuthContext } from '../context/auth/auth.context'
 export default function Home() {
     
     const { t } = useTranslation("common");
 
+    const ctx = useContext(AuthContext)
     const test = t("test.dev");
+
 
     return (
         <div className={styles.container}>

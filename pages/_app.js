@@ -1,11 +1,16 @@
 import "../styles/globals.css";
+import AppLayout from '../components/layout/AppLayout'
+
+import { useStore } from '../redux/store'
+import { Provider } from 'react-redux'
 
 import { ToastProvider } from 'react-toast-notifications'
+
+import { AuthProvider } from '../context/auth/auth.provider'
 
 import { I18nextProvider } from "react-i18next";    
 import i18next from 'i18next'
 import { config as i18nextConfig } from '../translations'
-console.log("🚀 ~ file: _app.js ~ line 8 ~ i18nextConfig", i18nextConfig)
 
 i18next.init(i18nextConfig)
 
@@ -19,13 +24,21 @@ function SafeHdyrate({children}) {
 
 function MyApp({ Component, pageProps }) {
 
+    const store = useStore(pageProps.initialReduxState)
+    
     return (
         <SafeHdyrate>
-            <I18nextProvider i18n={i18next}>
-                <ToastProvider autoDismiss={true}>
-                    <Component {...pageProps} />
-                </ToastProvider>
-            </I18nextProvider>
+            <Provider store={store}>
+                <I18nextProvider i18n={i18next}>
+                    <ToastProvider autoDismiss={true}>
+                        <AuthProvider>
+                            <AppLayout>
+                                <Component {...pageProps} />
+                            </AppLayout>
+                        </AuthProvider>
+                    </ToastProvider>
+                </I18nextProvider>
+            </Provider>
         </SafeHdyrate>
     );
 }

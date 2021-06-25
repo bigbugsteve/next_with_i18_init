@@ -1,10 +1,9 @@
 import React from 'react'
 
-const AppLayout = () => {
+const AppLayout = (props) => {
     return (
         <div className="layout__mainwrapper">
-            
-            
+            {props.children}
         </div>
     )
 }
