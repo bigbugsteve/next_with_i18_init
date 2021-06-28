@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="47.577" height="68.952" viewBox="0 0 47.577 68.952">
+  <g id="Group_6257" data-name="Group 6257" transform="translate(-911.708 -601.312)">
+    <path id="Path_13072" data-name="Path 13072" d="M929.52,664.015l-9.419,1.044,9.709,4.7-7.962,9.4,13.294-4.771,3.589,9.846,2.852-10.171,8.291,3.651-2.147-9.95" transform="translate(-0.539 -14.472)" fill="none" stroke="#376EB4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="Group_6212" data-name="Group 6212" transform="matrix(0.985, -0.174, 0.174, 0.985, 910.627, 606.024)">
+      <g id="Rectangle_1849" data-name="Rectangle 1849" transform="translate(0 0)">
+        <rect id="Rectangle_1853" data-name="Rectangle 1853" width="25.295" height="45.224" rx="5" transform="translate(0 10.219) rotate(-23.829)" fill="none" stroke="#376EB4" stroke-width="1"/>
+        <rect id="Rectangle_1854" data-name="Rectangle 1854" width="23.762" height="43.691" rx="4" transform="translate(1.011 10.611) rotate(-23.829)" fill="none" stroke="#376EB4" stroke-width="2"/>
+      </g>
+      <g id="Ellipse_291" data-name="Ellipse 291" transform="translate(25.911 40.005)">
+        <circle id="Ellipse_292" data-name="Ellipse 292" cx="1.916" cy="1.916" r="1.916" fill="none" stroke="#376EB4" stroke-width="1"/>
+        <circle id="Ellipse_293" data-name="Ellipse 293" cx="1.533" cy="1.533" r="1.533" transform="translate(0.383 0.383)" fill="none" stroke="#376EB4" stroke-width="1"/>
+      </g>
+      <line id="Line_1316" data-name="Line 1316" y1="2.786" x2="6.308" transform="translate(10.107 6.602)" fill="none" stroke="#376EB4" stroke-linecap="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -2,7 +2,7 @@ import resources from './resources';
 
 export const config = {
   interpolation: { escapeValue: false },
-  lng: 'en',
+  lng: 'nl',
   resources,
 };
 
