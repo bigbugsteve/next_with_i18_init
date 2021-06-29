@@ -4,6 +4,7 @@ import { Container, Row, Col, Button } from "reactstrap";
 import Link from "next/link";
 
 const index = () => {
+    
     const { t } = useTranslation("common");
 
     return (

@@ -1,0 +1,202 @@
+.navigation__container {
+    position: relative;
+    background-color: black;
+}
+
+.poland_service__logo {
+    width: 100px;
+    @media(min-width: 768px) {
+        width: 150px;
+    }
+}
+
+// Top banner
+.top-navigation {
+    position: relative;
+    color: $white-text;
+    .mdi-icon {
+        margin: 0 .1rem;
+        color: $black-text;
+    }
+}
+
+.banner__container {
+    padding: .5rem;
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+    @media(min-width: 768px) { display: flex; }
+}
+
+.banner__item {
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+// Toolbar
+.toolbar {
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    
+    @media(max-width: 768px) {
+    }
+}
+.toolbar__navigation {
+    display: flex;
+    justify-content: space-between;
+}
+.toolbar__list-group {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    &.auth_toolbar__section {
+        justify-content: flex-end;
+        // display: none;
+        @media(max-width: 768px) {
+            display: none;
+        }
+    }
+    @media(min-width: 768px) { justify-content: initial;}
+
+    &-item {
+        white-space: nowrap;
+        display: none;
+        align-items: center;
+        a {color: $white-text;}
+        @media(min-width: 768px) { display: flex; }
+
+        &.toolbar__logo { display: block; }
+    }
+    .toolbar__hamburger {
+        // position: absolute;
+        // top: 1rem;
+        // right: 1rem;
+        list-style: none;
+        svg {
+            color: $white-text;
+            // width: 3rem;
+            // height: 3rem;
+            // background-color: $light-blue-text;
+            
+        }
+        @media(min-width:768px) { display: none; }
+    }
+}
+
+// Banner
+.banner__item {
+    & svg{
+        fill: #fff;
+    }
+}
+
+.banner__logout {
+    cursor: pointer;
+}
+
+.banner__user {
+    & a{
+        &:hover{
+            color: #fff !important;
+        }
+    }
+    cursor: pointer;
+}
+
+.drawertoggle__button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 32px;
+    width: 36px;
+    background: transparent;
+    border:none;
+    cursor:pointer;
+    padding: 5px;
+    box-sizing: border-box;
+
+    &:focus{
+        outline:none;
+    }
+    @media(min-width:769px){
+        display: none;
+    }
+}
+
+.toggle-button__line{
+    width:30px;
+    height:2px;
+    background:#fff;
+}
+
+
+// SideDrawer
+.side__drawer {
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: $light-blue-bg;
+    height: 100vh;
+    width: 80vw;
+    max-width: 450px;
+    display: block;
+    padding: 2rem .5rem;
+    transition: all .2s ease-in-out;
+    transform: translateX(100%);
+    &.open {
+        transform: translateX(0)
+    }
+    &_close svg {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+    }
+    @media(min-width:768px) {
+        display: none
+    }
+    &_con-number {
+        position: absolute;
+        top: .2rem;
+        left: .5rem;
+        font-size: .7rem;
+    }
+    .side__drawer_user, .side__drawer_navigation-list, .side__drawer_logout-btn-wrapper {
+        padding: 1rem 0;
+        margin: 0 2rem;
+        border-bottom: 1px solid $gray-text
+    }
+    .side__drawer_user-name {
+        .side__drawer_user-icon-wrapper {
+            background-color: $white-text;
+            border-radius: 50%;
+            padding: .2rem;
+        }
+        svg {
+        width: 2rem;
+        height: 2rem;
+        }
+    }
+    .side__drawer_navigation-list {
+        &-item {
+            cursor: pointer;
+            padding: .8rem;
+        }
+    }
+    .side__drawer_logout-btn-wrapper {
+        cursor: pointer;
+    }
+}
+
+.side__drawer_close{
+    & svg{
+        cursor: pointer;
+    }
+}

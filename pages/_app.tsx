@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import AppLayout from '../components/layout/AppLayout'
 
 import { useStore } from '../redux/store'
@@ -6,7 +5,11 @@ import { Provider } from 'react-redux'
 
 import { ToastProvider } from 'react-toast-notifications'
 
+import 'bootstrap/dist/css/bootstrap.css';
+import '../styles/app.scss'
+
 import { AuthProvider } from '../context/auth/auth.provider'
+import ProtectRoute from "../context/auth/ProtectedRoute";
 
 import { I18nextProvider } from "react-i18next";    
 import i18next from 'i18next'
@@ -32,9 +35,12 @@ function MyApp({ Component, pageProps }) {
                 <I18nextProvider i18n={i18next}>
                     <ToastProvider autoDismiss={true}>
                         <AuthProvider>
+                            <ProtectRoute>
+
                             <AppLayout>
                                 <Component {...pageProps} />
                             </AppLayout>
+                            </ProtectRoute>
                         </AuthProvider>
                     </ToastProvider>
                 </I18nextProvider>

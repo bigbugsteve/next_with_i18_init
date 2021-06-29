@@ -27,7 +27,9 @@ function reducer(state: any, action: any) {
 }
 
 export const AuthProvider: React.FunctionComponent = ({children}) => {
+
     const [authState, authDispatch] = useReducer(reducer, INITIAL_STATE);
+    
     return (
         <AuthContext.Provider value={{ authState, authDispatch }}>
             {children}

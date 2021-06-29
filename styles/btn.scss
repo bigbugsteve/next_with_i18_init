@@ -1,0 +1,33 @@
+.btn__primary {
+    background-color: $primary-color !important;
+    border-color: transparent !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: background-color 0.5s ease !important;
+    
+    
+    &:hover, &:focus, &:active, &:active:focus {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none !important;
+        background-color: $primary-color-hover !important;
+
+      }
+}
+
+.button {
+    display: inline-block;
+    // background-color: $dark-blue-text;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.button__fixl{
+  width: 200px !important;
+}
+
+.general__button {
+  min-width:155px;
+}
