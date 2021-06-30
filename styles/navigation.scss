@@ -1,6 +1,6 @@
 .navigation__container {
     position: relative;
-    background-color: black;
+    // background-color: black;
 }
 
 .poland_service__logo {
@@ -13,7 +13,7 @@
 // Top banner
 .top-navigation {
     position: relative;
-    color: $white-text;
+    // color: $white-text;
     .mdi-icon {
         margin: 0 .1rem;
         color: $black-text;
@@ -67,15 +67,13 @@
         white-space: nowrap;
         display: none;
         align-items: center;
-        a {color: $white-text;}
+        a {color: $black-text;}
         @media(min-width: 768px) { display: flex; }
 
         &.toolbar__logo { display: block; }
     }
     .toolbar__hamburger {
-        // position: absolute;
-        // top: 1rem;
-        // right: 1rem;
+    
         list-style: none;
         svg {
             color: $white-text;

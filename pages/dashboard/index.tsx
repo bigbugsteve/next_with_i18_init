@@ -2,8 +2,9 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Container, Row, Col, Button } from "reactstrap";
 import Link from "next/link";
+import Image from 'next/image'
 
-const index = () => {
+const Dashboard = (props) => {
     
     const { t } = useTranslation("common");
 
@@ -19,14 +20,18 @@ const index = () => {
                         </div>
                         <Row className="hero__buttons">
                             <Link href="/claims/add">
-                                <Button className="btn__primary button__fixl my-2">
-                                    {t("dashboard.new_claim")}
-                                </Button>
+                                <a>
+                                    <Button className="btn__primary button__fixl my-2">
+                                        {t("dashboard.new_claim")}
+                                    </Button>
+                                </a>
                             </Link>
                             <Link href="/claims">
+                                <a>
                                 <Button className="btn__primary button__fixl my-2">
                                     {t("dashboard.claim_history")}
                                 </Button>
+                                </a>
                             </Link>
                         </Row>
                     </Col>
@@ -46,9 +51,12 @@ const index = () => {
                             <div
                                 className={/*this.state.isAdCovered?"service__icon-active":"service__icon-inactive"*/ "service__icon-active"}
                             >
-                                <img
+                                <Image
                                     src="/adamage.svg"
-                                    alt="accidental damage"
+                                    // src="https://example.com/test"
+                                    alt="Landscape picture"
+                                    width={500}
+                                    height={500}
                                 />
                             </div>
                             <div
@@ -76,4 +84,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default Dashboard;

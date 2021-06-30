@@ -13,8 +13,10 @@ import { Auth } from '../api/api';
 import Countdown from 'react-countdown';
 import PhoneNForm2F from '../components/login/PhoneForm2F';
 import EmailForm2F from '../components/login/EmailForm2F';
+import Calculate from '../components/calculate/Calculate';
 
 const Home = ({handleSubmit, dispatch, pristine, submitting, ...props}) => {
+console.log("🚀 ~ file: index.tsx ~ line 18 ~ Home ~ props", props)
 
     // States
 
@@ -179,12 +181,21 @@ const Home = ({handleSubmit, dispatch, pristine, submitting, ...props}) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Container>
-                
-               Homepage
+                <Calculate />
+               {props.ssr}
                 
             </Container>
         </div>
     );
+}
+
+export async function getStaticProps (context) {
+    return {
+        props: {
+            // ssr: "ssr"
+        }
+        
+    }
 }
 
 export default reduxForm({

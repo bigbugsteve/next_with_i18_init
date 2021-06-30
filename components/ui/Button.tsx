@@ -3,11 +3,12 @@ import React from 'react'
 interface Props {
     buttonName: string,
     onClick: (value: any) => void,
-    classes?: string
+    classes?: string,
+    disabled?: boolean
 }
-const Button = ({buttonName, onClick, classes}: Props) => {
+const Button = ({buttonName, onClick, classes, disabled}: Props) => {
     return (
-        <div className={`button ${classes}`} onClick={onClick}>
+        <div className={`button ${classes} ${disabled && 'disabled'}`} onClick={onClick}>
             {buttonName}
         </div>
     )

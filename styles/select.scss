@@ -1,0 +1,12 @@
+.select-field {
+    border: none;
+    padding: .5rem;
+    transition: all .2s ease;
+    &:active, &:hover {
+        outline: none;
+        border: none;
+    }
+    option {
+        border: none;
+    }
+}

@@ -55,7 +55,7 @@ const CheckBoxField: React.FC<CheckBoxProps> = ({
           onChange={onChange}
           checked={value}
           disabled={disabled}
-          icon={icon}
+        //   icon={icon}
         />
         <div className="parentLabel">
           {className === 'button' || className === 'button noIcon_button'

@@ -41,10 +41,12 @@ const RadioButtonField: React.FC<RadioProps> = ({
       onChange(radioValue);
     }
   }, [defaultChecked, onChange, radioValue]);
+
   const RadioButtonClass = classNames({
     'radio-btnIcons': true,
     disabled,
   });
+  
   const handleChange = () => {
     onChange(radioValue);
   };
@@ -60,7 +62,7 @@ const RadioButtonField: React.FC<RadioProps> = ({
           onChange={handleChange}
           checked={value === radioValue}
           disabled={disabled}
-          icon={icon}
+        //   icon={icon}
         />
         <div className="parentLabel">
           {className === 'button' || className === 'button noIcon_button'

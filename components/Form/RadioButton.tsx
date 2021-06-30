@@ -24,7 +24,7 @@ type RadioFieldProps = {
     icon?:any
 }
 
-const RadioButtonField: React.FC<RadioProps> = ({
+const RadioButtonField = ({
   defaultChecked,
   onChange,
   radioValue,
@@ -34,7 +34,7 @@ const RadioButtonField: React.FC<RadioProps> = ({
   name,
   value,
   icon
-}) => {
+}: RadioProps) => {
 
   useEffect(() => {
     if (defaultChecked) {
@@ -60,7 +60,7 @@ const RadioButtonField: React.FC<RadioProps> = ({
           onChange={handleChange}
           checked={value === radioValue}
           disabled={disabled}
-          icon={icon}
+        //   icon={icon}
         />
         <div className="parentLabel">
           {className === 'button' || className === 'button noIcon_button'

@@ -2,18 +2,18 @@ import { useRouter } from 'next/dist/client/router'
 import React, { useContext, useEffect } from 'react'
 import { AuthContext } from './auth.context'
 import LoadingScreen from '../../components/ui/Loader'
+import { useTranslation } from 'react-i18next'
 
 function ProtectedRoute({ children }) {
 
     const router = useRouter()
-
     const {
         authState: { isAuthenticated }
     } = useContext<any>(AuthContext)
     
     useEffect(()=>{
         // Home page is not protected
-        if(window && window.location && window.location.pathname === '/' || window.location.pathname === '/login' ) {
+        if(window && window.location && window.location.pathname === '/' || window.location.pathname === '/login') {
             return
         }
         // If not logged in, redirect to homepage

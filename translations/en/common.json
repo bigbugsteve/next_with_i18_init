@@ -1,10 +1,27 @@
 {
-    "navigation": {
+    "navigation": {        
+        "home": "Home",
+        "about": "About",
         "new_claim": "New claim",
         "claim_history": "Claim history",
         "profile": "Profile",
         "logout": "Log out",
         "logged_in": "Logged in user"
+    },
+    "home": {
+        "calculate_title": "Calculate",
+        "warranty": "Warranty",
+        "post_warranty": "Post-Warranty",
+        "calculate": "Calculate",
+        "estimation": "Estimation",
+        "screen": "Screen",
+        "battery": "Battery",
+        "charging": "Charging",
+        "back_cover": "Back cover",
+        "other": "Other",
+        "brand_title": "Choose brand and model",
+        "damage_title": "Choose damage",
+        "warranty_title": "Choose warranty"
     },
     "dashboard": {
         "hero_title": "Welcome to your insurance",

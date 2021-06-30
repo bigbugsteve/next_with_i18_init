@@ -51,11 +51,23 @@ const Navigation = ({handleSideDrawer, menuItems}) => {
                                 <li className="toolbar__list-group-item toolbar__logo d-flex justify-content-start">
                                     <Link href="/dashboard">
                                         <a>
-                                            <img className="poland_service__logo mr-3" src="/ps_logo.png" />
+                                            <img className="poland_service__logo mr-3" src="/ps_logo_black.png" />
                                         </a>
                                     </Link>
                                 </li>
-                                {/* <li className="toolbar__list-group-item text-lg mx-3">
+                                <li className="toolbar__list-group-item text-lg mx-3">
+                                    <Link href="/claims/add">
+                                        <a>{t("navigation.home")}</a>
+                                    </Link>
+                                </li>
+                                <li className="toolbar__list-group-item text-lg mx-3">
+                                    <Link href="/claims/add">
+                                        <a>{t("navigation.about")}</a>
+                                    </Link>
+                                </li>
+                                {isAuthenticated &&
+                                <>
+                                <li className="toolbar__list-group-item text-lg mx-3">
                                     <Link href="/claims/add">
                                         <a>{t("navigation.new_claim")}</a>
                                     </Link>
@@ -64,8 +76,10 @@ const Navigation = ({handleSideDrawer, menuItems}) => {
                                     <Link href="/claims">
                                         <a>{t("navigation.claim_history")}</a>
                                     </Link>
-                                </li> */}
-                                {items}
+                                </li>
+                                </>
+                                }
+                                {/* {items} */}
                                 <li className="toolbar__hamburger">
                                     <FontAwesomeIcon icon={faBars} size="3x" onClick={handleSideDrawer} />
                                     {/* <DrawerToggleButton
@@ -82,16 +96,18 @@ const Navigation = ({handleSideDrawer, menuItems}) => {
                                 </li>
                                 :
                                 <li className="toolbar__list-group-item text-lg mx-3">
-                                    <Link href="/profile">
+                                    <Link href="/login">
                                         <a>{t("login.login")}</a>
                                     </Link>
                                 </li>
                                 }
+                                {isAuthenticated &&
                                 <li className="toolbar__list-group-item text-lg mx-3">
                                     <Link href="/profile">
                                         <a>{t("navigation.profile")}</a>
                                     </Link>
                                 </li>
+                                }
 
                             </ul>
                         </div>

@@ -4,9 +4,9 @@ import Select from 'react-select';
 type SelectProps = {
     name:string;
     value?:any;
-    onChange?:any;
+    onChange?: (value: any) => void;
     placeholder: string;
-    options?: [Object] | null;
+    options?: any;
 }
 
 export const SelectField: React.FC<SelectProps> = ({
@@ -32,7 +32,8 @@ export const SelectField: React.FC<SelectProps> = ({
 
 type SelectFieldProps = {
     input?:any;
-    options?:[Object] | null;
+    onChange?: (value: any) => void;
+    options?: any;
     meta?: any;
     placeholder: string;
     className?: string;
@@ -47,7 +48,7 @@ const renderSelectField: React.FC<SelectFieldProps> = ({
       options={options}
       placeholder={placeholder}
     />
-    {meta.touched && meta.error && <span className="form__form-group-error">{meta.error}</span>}
+    {/* {meta.touched && meta.error && <span className="form__form-group-error">{meta.error}</span>} */}
   </div>
 );
 

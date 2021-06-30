@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import cookie from "react-cookies";
 import RootState from "../../interfaces/RootState";
 import { User } from "../../api/api";
+import { SafeHydrate } from "../../components/helper/SafeHydrate";
 
 const Customer = ({ handleSubmit, submitting, pristine, ...props }) => {
 
@@ -65,35 +66,37 @@ const Customer = ({ handleSubmit, submitting, pristine, ...props }) => {
 
 
     return (
-        <div className="profile__mainwrapper w-100">
-            <Container>
-                <form
-                    className="form"
-                    onSubmit={handleSubmit(() => updateCustomerData())}
-                >
-                    <Col className="claim__main-title">
-                        <h1 className="py-3">
-                            {t("customerdata.your_details")}
-                        </h1>
-                    </Col>
-                    <CustomerForm />
-                    <Row>
-                        <Col
-                            xs={12}
-                            className="mt-3 mb-5 d-flex justify-content-end"
-                        >
-                            <Button
-                                disabled={pristine || submitting}
-                                className="btn__primary"
-                                type="submit"
-                            >
-                                {t("customerdata.save")}
-                            </Button>
+        <SafeHydrate>
+            <div className="profile__mainwrapper w-100">
+                <Container>
+                    <form
+                        className="form"
+                        onSubmit={handleSubmit(() => updateCustomerData())}
+                    >
+                        <Col className="claim__main-title">
+                            <h1 className="py-3">
+                                {t("customerdata.your_details")}
+                            </h1>
                         </Col>
-                    </Row>
-                </form>
-            </Container>
-        </div>
+                        <CustomerForm />
+                        <Row>
+                            <Col
+                                xs={12}
+                                className="mt-3 mb-5 d-flex justify-content-end"
+                            >
+                                <Button
+                                    disabled={pristine || submitting}
+                                    className="btn__primary"
+                                    type="submit"
+                                >
+                                    {t("customerdata.save")}
+                                </Button>
+                            </Col>
+                        </Row>
+                    </form>
+                </Container>
+            </div>
+        </SafeHydrate>
     );
 };
 

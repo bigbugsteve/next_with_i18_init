@@ -17,11 +17,19 @@
 }
 
 .button {
+    cursor: pointer;
     display: inline-block;
     // background-color: $dark-blue-text;
     padding: .5rem 1rem;
     border-radius: 5px;
     margin: 1rem 0;
+    &.btn-black {
+        background-color: $black-bg;
+        color: $white-text;
+    }
+    &.disabled {
+        opacity: .5;
+    }
 }
 
 .button__fixl{
