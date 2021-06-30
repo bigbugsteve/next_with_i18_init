@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
@@ -7,8 +7,12 @@ import SelectField from "../../components/Form/Select";
 import renderRadioButtonField from "../../components/Form/RadioButton";
 import RootState from '../../interfaces/RootState';
 import Button from '../ui/Button';
+import Modal from '../ui/Modal';
 
 const Calculate = ({handleSubmit, ...props}) => {
+
+    // States
+    const [ showModal, setShowModal ] = useState(false)
     // Variables
     const claimStore = useSelector((state: RootState) => state.form.calculationform)
     const chosenClaimType = claimStore && claimStore.values && claimStore.values.warrantyType
@@ -34,6 +38,14 @@ const Calculate = ({handleSubmit, ...props}) => {
     }
 
     // Functions 
+    const handleEstimate = async () => {
+
+    }
+
+    const submitForm = () => {
+        setShowModal(true)
+    }
+
     const handleBrandSelect = (e) => {
 
     }
@@ -175,16 +187,17 @@ const Calculate = ({handleSubmit, ...props}) => {
                 </Row>
                 <Row>
                     <Col className="text-center">
-                        <Button buttonName="Calculate" classes="btn-black" onClick={handleBrandSelect} 
+                        <Button buttonName="Calculate" classes="btn-black" onClick={handleEstimate} 
                             disabled={chosenDamageType === 5 || chosenClaimType == 100}
                         />
                     </Col>
                     <Col className="text-center">
-                        <Button buttonName="Next" classes="btn-black" onClick={handleBrandSelect} />
+                        <Button buttonName="Next" classes="btn-black" onClick={submitForm} />
                     </Col>
-
                 </Row>
-                    
+                {showModal &&
+                <Modal> kutya</Modal>
+                }
             </form>
             {/* Estimation */}
             <Estimation />

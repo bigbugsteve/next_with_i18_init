@@ -17,7 +17,7 @@ import Document, {
           <body>
             <Main />
             <div id="loader-hook"></div>
-            {/* <div id="modal-root" /> */}
+            <div id="modal-root" />
             <NextScript />
           </body>
         </Html>
